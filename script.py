@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
 
-def send_mail(workflow_name, repo_name):
+def send_mail(workflow_name, repo_name, workflow_run_id):
     sender_email = os.getenv('SENDER_EMAIL')
     sender_password = os.getenv('SENDER_PASSWORD')
     receiver_email  = os.getenv('RECEIVER_EMAIL')
