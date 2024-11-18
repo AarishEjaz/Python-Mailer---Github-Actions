@@ -57,3 +57,5 @@ jobs:
           WORKFLOW_NAME: ${{ github.workflow }}
           REPO_NAME: ${{ github.repository }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{secrets.RECEIVER_EMAIL}}
