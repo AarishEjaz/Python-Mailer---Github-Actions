@@ -19,9 +19,9 @@ def send_mail(workflow_name, repo_name, workflow_run_id):
     try:
         server = smtplib.SMTP('smtp.gmail.com',587)
         server.starttls()
-        server.login(send_mail, sender_password)
+        server.login(sender_email, sender_password)
         text = msg.as_string()
-        server.sendmail(send_mail,receiver_email,text)
+        server.sendmail(sender_email,receiver_email,text)
         server.quit()
 
         print("Email sent successfully")
